@@ -1,3 +1,8 @@
+# CartoVista
+
+Checkout the branch `cartovista` and run `npm run build`. The minimized file is in `dist/require.js`.
+
+
 # RequireJS
 
 RequireJS loads plain JavaScript files as well as more defined modules. It is
