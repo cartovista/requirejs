@@ -1436,7 +1436,15 @@ var requirejs, require, define;
                                         contextName +
                                         (relMap ? '' : '. Use require([])')));
                         }
-                        return defined[id];
+                        
+                        var def = defined[id];
+
+                        if (def && def.default) {
+                            def.default.default = def;
+                            def = def.default;
+                        }
+
+                        return def;
                     }
 
                     //Grab defines waiting in the global queue.

@@ -6,7 +6,8 @@
   },
   "main": "require.js",
   "scripts": {
-    "pretest": "jscs . && jshint require.js"
+    "pretest": "jscs . && jshint require.js",
+    "build": "uglifyjs require.js --output ./dist/require.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "jscs": "^1.12.0",
-    "jshint": "^2.7.0"
+    "jshint": "^2.7.0",
+    "uglify-js": "^3.12.4"
   }
 }
