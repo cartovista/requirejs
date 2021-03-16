@@ -1439,7 +1439,7 @@ var requirejs, require, define;
                         
                         var def = defined[id];
 
-                        if (def && def.default) {
+                        if (def && typeof def !== "function" && def.default) {
                             def.default.default = def;
                             def = def.default;
                         }
